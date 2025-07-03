@@ -63,10 +63,10 @@ class Plantilla {
                 </button>
                 <div class="collapse navbar-collapse" id="navbarWicked">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="/index.php">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/agregar.php">Agregar Personaje</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/ver_personajes.php">Ver Personajes</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/acerca_de.php">Acerca de</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Gestion_Personajes_de_Wicked/index.php">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Gestion_Personajes_de_Wicked/agregar.php">Agregar Personaje</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Gestion_Personajes_de_Wicked/index.php">Ver Personajes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Gestion_Personajes_de_Wicked/acerca_de.php">Acerca de</a></li>
                     </ul>
                 </div>
             </div>

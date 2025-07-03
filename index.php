@@ -71,49 +71,65 @@ body::before {
     </div>
 
     <?php if ($resultado->num_rows > 0): ?>
-        <div class="card p-4">
-            <div class="table-responsive">
-                <table class="table table-dark table-hover table-bordered align-middle text-center">
-                    <thead>
-                        <tr>
-                            <th>Foto</th>
-                            <th>Nombre</th>
-                            <th>Color</th>
-                            <th>Tipo</th>
-                            <th>Nivel</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <?php while ($fila = $resultado->fetch_assoc()): ?>
-                        <tr>
-                            <td><img src="<?= htmlspecialchars($fila['foto']) ?>" alt="Foto" width="70" height="70" class="rounded-circle"></td>
-                            <td><?= htmlspecialchars($fila['nombre']) ?></td>
-                            <td><?= htmlspecialchars($fila['color']) ?></td>
-                            <td><?= htmlspecialchars($fila['tipo']) ?></td>
-                            <td><?= htmlspecialchars($fila['nivel']) ?></td>
-                            <td>
-                                <a href="editar.php?id=<?= $fila['id'] ?>" class="btn btn-warning btn-sm btn-custom" title="Editar">
-                                    <i class="bi bi-pencil-fill text-warning"></i>
-                                </a>
-                                <a href="eliminar.php?id=<?= $fila['id'] ?>" class="btn btn-danger btn-sm btn-custom" onclick="return confirm('¿Estás seguro de eliminar este personaje?')" title="Eliminar">
-                                    <i class="bi bi-trash-fill text-danger"></i>
-                                </a>
-                                <a href="descargar_pdf.php?id=<?= $fila['id'] ?>" class="btn btn-info btn-sm btn-custom" target="_blank" title="Descargar PDF">
-                                    <i class="bi bi-file-earmark-pdf-fill text-info"></i>
-                                </a>
-                            </td>
-                        </tr>
-                    <?php endwhile ?>
-                    </tbody>
-                </table>
-            </div>
+    <style>
+        .table thead {
+            background: linear-gradient(135deg, #39ff14, #e83e8c);
+            color: black;
+        }
+
+        .table tbody tr:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-custom i {
+            font-size: 1.2rem;
+        }
+
+        .table td, .table th {
+            vertical-align: middle !important;
+        }
+    </style>
+
+    <div class="card-wicked mx-auto" style="max-width: 1000px;">
+        <div class="table-responsive">
+            <table class="table table-dark table-hover table-bordered text-center align-middle">
+                <thead>
+                    <tr>
+                        <th>Foto</th>
+                        <th>Nombre</th>
+                        <th>Color</th>
+                        <th>Tipo</th>
+                        <th>Nivel</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php while ($fila = $resultado->fetch_assoc()): ?>
+                    <tr>
+                        <td>
+                            <img src="<?= htmlspecialchars($fila['foto']) ?>" alt="Foto" width="70" height="70" class="rounded-circle border border-light">
+                        </td>
+                        <td><?= htmlspecialchars($fila['nombre']) ?></td>
+                        <td><?= htmlspecialchars($fila['color']) ?></td>
+                        <td><?= htmlspecialchars($fila['tipo']) ?></td>
+                        <td><?= htmlspecialchars($fila['nivel']) ?></td>
+                        <td>
+                            <a href="editar.php?id=<?= $fila['id'] ?>" class="btn btn-warning btn-sm btn-custom" title="Editar">Editar</a>
+                            <a href="descargar_pdf.php?id=<?= $fila['id'] ?>" class="btn btn-info btn-sm btn-custom" target="_blank" title="Descargar PDF">Descargar PDF</a>
+                            <a href="eliminar.php?id=<?= $fila['id'] ?>" class="btn btn-danger btn-sm btn-custom" onclick="return confirm('¿Estás seguro de eliminar este personaje?')" title="Eliminar">Eliminar</a>
+                        </td>
+                    </tr>
+                <?php endwhile ?>
+                </tbody>
+            </table>
         </div>
-    <?php else: ?>
-        <div class="alert alert-info text-center mt-4">
-            <i class="bi bi-person-bounding-box text-primary me-2"></i> No hay personajes registrados todavía.
-        </div>
-    <?php endif; ?>
+    </div>
+<?php else: ?>
+    <div class="alert alert-info text-center mt-4">
+        <i class="bi bi-person-bounding-box text-primary me-2"></i> No hay personajes registrados todavía.
+    </div>
+<?php endif; ?>
+
 
     <div class="text-center mt-4">
         <a href="agregar.php" class="btn-wicked-elegante" title="Agregar nuevo personaje">
