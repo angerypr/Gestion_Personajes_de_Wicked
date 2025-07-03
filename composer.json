@@ -1,0 +1,8 @@
+{
+    "name": "angery/gestion_personajes",
+    "description": "Gestión de personajes Wicked en PHP",
+    "license": "MIT",
+    "require": {
+        "dompdf/dompdf": "^3.1"
+    }
+}
