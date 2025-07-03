@@ -57,7 +57,7 @@ class Plantilla {
 
         <nav class="navbar navbar-expand-lg navbar-dark navbar-wicked mb-4">
             <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="/index.php">Wicked World</a>
+                <a class="navbar-brand d-flex align-items-center" href="/Gestion_Personajes_de_Wicked/index.php">Wicked World</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWicked">
                     <span class="navbar-toggler-icon"></span>
                 </button>
