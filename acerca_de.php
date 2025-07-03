@@ -91,7 +91,7 @@ Plantilla::aplicar();
 
         <div class="acerca-video">
             <video controls>
-              <source src="videos/Tarea 2 - Gestor Multimedia - Made with Clipchamp.mp4" type="video/mp4">
+              <source src="../Tarea 2 - Gestor Multimedia - Made with Clipchamp.mp4" type="video/mp4">
             Tu navegador no soporta el video.
             </video>
         </div>
