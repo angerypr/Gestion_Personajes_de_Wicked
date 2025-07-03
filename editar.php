@@ -1,6 +1,6 @@
 <?php
 require_once 'plantilla.php';
-require_once 'db_config.php';
+require_once 'db_config_loader.php';
 
 Plantilla::aplicar();
 

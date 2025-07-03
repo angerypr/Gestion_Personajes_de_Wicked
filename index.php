@@ -1,6 +1,6 @@
 <?php
 require_once 'plantilla.php';
-require_once 'db_config.php';
+require_once 'db_config_loader.php';
 
 Plantilla::aplicar(); 
 
@@ -14,7 +14,7 @@ $resultado = $conn->query($sql);
     background: url('https://cinescopia.com/wp-content/uploads/2024/11/Universal_HomeMainCarousel_1920x1025-5.jpg') no-repeat center center fixed;
     background-size: cover;
     background-attachment: fixed;
-    background-color: #000; /* Fallback por si no carga */
+    background-color: #000; 
     color: white;
 }
 
